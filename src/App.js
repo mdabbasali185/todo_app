@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import SignUp from './Auth/SignUp/SignUP';
 import LogIn from './Auth/LogIn/LogIn';
+import RequireAuth from './Auth/RequireAuth/RequireAuth';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import { ToastContainer } from 'react-toastify';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -11,7 +12,8 @@ import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './Firebase/firebase.init';
-import WorkTodo from './Pages/WorkTodo/WorkTodo';
+import WorkTodo from './Pages/WorkToDo/WorkToDo';
+import Todo from './Pages/ToDo/ToDo';
 
 function App() {
   const [user, loading, error] = useAuthState(auth);
@@ -26,6 +28,9 @@ function App() {
         <Route path='/' element={<WorkTodo />}></Route>
         <Route path='/login' element={<LogIn />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
+        <Route path='/todo' element={<RequireAuth>
+          <Todo></Todo>
+        </RequireAuth>}></Route>
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
