@@ -1,0 +1,31 @@
+Footer {
+  background: #232331;
+  color: antiquewhite;
+  font-size: 1.3rem;
+}
+footer h5:hover {
+  width: 200px;
+  background: transparent;
+  color: #18baea;
+  padding-left: 15px;
+  transition: all 0.3s ease-in-out;
+}
+.fb:hover {
+  color: #3b5998;
+}
+.github:hover {
+  color: #ea4335;
+  transition: all 0.3s ease-in;
+}
+.google:hover {
+  color: #fbbc05;
+  transition: all 0.3s ease-in;
+}
+.instagram:hover {
+  color: #c32aa3;
+  transition: all 0.3s ease-in;
+}
+.linkedin:hover {
+  color: #f0b6a8;
+  transition: all 0.3s ease-in;
+}
