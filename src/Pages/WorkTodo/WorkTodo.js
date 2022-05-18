@@ -2,13 +2,14 @@ import React from 'react';
 
 const WorkTodo = () => {
     return (
-        <div className=" my-5 mx-auto w-50 px-5 py-3 form-container">
+       <div className='loginBg'>
+            <div className=" my-5 mx-auto w-50 px-5 py-3 addNew">
         <div className="">
           <form className=" mx-auto">
-            <h3 className="text-center text-primary fw-bold pt-4">
+            <h3 className="text-center text-white fw-bold pt-4">
               Add Todo Task
             </h3>
-            <label className="mt-3 text-primary fw-bold" htmlFor="text">
+            <label className="mt-3 text-white fw-bold" htmlFor="text">
               Task Name:
             </label>
             <input
@@ -16,21 +17,23 @@ const WorkTodo = () => {
               type="text"
               name=""
               id=""
+              placeholder='Task Name'
               required
             />
-            <label className="mt-3 text-primary fw-bold" htmlFor="email">
+            <label className="mt-3 text-white fw-bold" htmlFor="email">
               Task Details:
             </label>
             <input
              
               className="w-100 input-field"
-              type="text-area"
+              type="textarea"
+              placeholder='task details'
               name=""
               id=""
               required
             />
             <input
-              className=" input-btn d-block mx-auto mt-3"
+              className="  mx-auto mt-3 animated-button"
               type="submit"
               value="Add Task"
             />
@@ -39,6 +42,7 @@ const WorkTodo = () => {
           </form>
         </div>
       </div>
+       </div>
     );
 };
 

@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Pages/Home/Home';
 import SignUp from './Auth/SignUp/SignUP';
 import LogIn from './Auth/LogIn/LogIn';
 import NotFound from './Pages/Shared/NotFound/NotFound';
@@ -12,6 +11,7 @@ import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from './Firebase/firebase.init';
+import WorkTodo from './Pages/WorkTodo/WorkTodo';
 
 function App() {
   const [user, loading, error] = useAuthState(auth);
@@ -23,7 +23,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/' element={<WorkTodo />}></Route>
         <Route path='/login' element={<LogIn />}></Route>
         <Route path='/signup' element={<SignUp />}></Route>
         <Route path="*" element={<NotFound />} />

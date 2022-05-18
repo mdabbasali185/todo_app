@@ -22,6 +22,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
+                          
                             <Nav>
                                 <NavLink
                                     className={({ isActive }) =>
@@ -29,7 +30,7 @@ const Header = () => {
                                     }
                                     to="/"
                                 >
-                                    Home
+                                    WorkTodo
                                 </NavLink>
                             </Nav>
 
